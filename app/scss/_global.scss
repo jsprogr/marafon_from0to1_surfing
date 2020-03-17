@@ -1,24 +1,42 @@
+html{
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+
 body{
     font-family: 'Fira Sans', sans-serif;
     font-weight: 400;
     font-size: 16px;
+    background-color: #171919;
+    color: #fff;
+    text-transform: uppercase;
 }
 a{
     display: inline-block;
     text-decoration: none;
+    color: #fff;
 }
 ul, li{
     list-style: none;
     margin: 0;
     padding: 0;
 }
-.subtitle-left{
+
+.container{
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.headline-left{
     font-size: 22px;
     line-height: 32px;
     text-align: right;
     letter-spacing: 7.33333px;
-    text-transform: uppercase;
-    color: #FFFFFF;
     opacity: 0.5;
     padding-left: 103px;
     position: relative;
@@ -31,5 +49,32 @@ ul, li{
         background-color: #fff;
         left: 0;
         top: 50%;
+    }
+}
+
+.surf{
+    padding: 160px 0 210px;
+    background: {
+        image: url(../images/surf-bg.png);
+        position: right 290px;
+        repeat: no-repeat;
+        size: auto;
+    }
+
+
+
+}
+
+.subtitle{
+    display: block;
+    
+    &__head{
+        font-weight: 800;
+        font-size: 40px;
+        padding-right: 10px;
+
+        span{
+            font-weight: 100;
+        }
     }
 }

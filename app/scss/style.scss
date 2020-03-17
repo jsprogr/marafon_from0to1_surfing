@@ -24,8 +24,6 @@
     right: 80px;
     bottom: 116px;
     text-align: right;
-    color: #fff;
-    text-transform: uppercase;
 }
 .slider-item__info-subtitle{
     margin-bottom: 5px;
@@ -62,7 +60,6 @@
     bottom: 36px;
     max-width: 920px; 
     width: 100%;
-    color: #fff;
     .slick-current{
         .dots-box{
             border-top: 4px solid $green;
@@ -85,6 +82,7 @@
     &__name{
         font-weight: 300;
         line-height: 19px;
+        text-transform: capitalize;
     }
 }
 .header__aside{
@@ -95,14 +93,11 @@
     border-right: 1px solid rgba(#fff, .25);
     height: 100vh;
     text-align: center;
-    color: #fff;
 }
 .header__title{
     font-weight: 800;
     font-size: 200px;
     line-height: 156px;
-    text-transform: uppercase;
-    color: #FFFFFF;
     max-width: 467px;
     opacity: 0.07;
     position: absolute;
@@ -114,7 +109,6 @@
 .menu{
     padding-top: 40px;
     a{
-        color: #fff;
         span{
             display: block;
             font-weight: 500;
@@ -123,6 +117,7 @@
             letter-spacing: 3px;
             padding-top: 6px; 
             margin-bottom: 20px;
+            text-transform: capitalize;
         }
     }
     
@@ -132,7 +127,6 @@
     font-weight: 800;
     font-size: 72px;
     line-height: 64px;
-    text-transform: uppercase;
     span{
         padding-top: 15px;
         font-weight: 300;
@@ -157,6 +151,7 @@
     letter-spacing: 1.05px;
     position: relative;
     padding-left: 19px;
+    text-transform: capitalize;
     &::before{
         content: "";
         position: absolute;
@@ -192,6 +187,42 @@
     to{
         stroke-dashoffset: 0;
     }
+}
+
+.title{
+    
+    span{
+        font-weight: 800;
+        font-size: 200px;
+        color: rgba(#fff, .02);
+        position: relative;
+        transform: translateX(-50px);
+        display: inline-block;
+    }
+    h3{
+        margin: 0;
+        color: #fff;
+        font-size: 80px;
+        position: absolute;
+        top: 0px;
+        right: -5px;
+        &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 80px;
+            height: 1px;
+            background-color: $green;
+        }
+    }
+    
+    
+}
+
+.surf__subtitle{
+    text-align: right;
+    padding-right: 80px;
 }
 
 
