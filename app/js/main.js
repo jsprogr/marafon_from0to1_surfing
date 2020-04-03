@@ -23,7 +23,7 @@ $(function(){
     });
 
     $('.slider-map').slick({
-      slidesToShow: 8,
+        slidesToShow: 8,
         slidesToScroll: 1,
         arrows: false,
         asNavFor: '.surf-slider',
