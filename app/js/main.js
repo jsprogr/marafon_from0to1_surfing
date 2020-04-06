@@ -30,7 +30,7 @@ $(function(){
       focusOnSelect: true,
     });
 
-    $('.travel__slider').slick({
+    $('.travel__slider, .shop__slider').slick({
       infinite: true,
       fade: true,
       prevArrow: '<img class="slider-arrows slider-arrows__left" src="images/arrows-left.svg" alt="">',
@@ -69,4 +69,14 @@ $('.quantity').each(function() {
     spinner.find("input").trigger("change");
   });
 
+  $('.quantity-button').on('click', () => {
+    let summ = $('.nights').val() * $('.summ').data('nights') + ($('.guests').val() -1) * $('.summ').data('guests');
+    $('.summ').html(summ);
+  });
+  let summ = $('.nights').val() * $('.summ').data('nights') + ($('.guests').val() -1) * $('.summ').data('guests');
+  $('.summ').html(summ);
+});
+
+$('.surfboard-box__circle').on('click', function(e) {
+  $(this).toggleClass('active');
 });

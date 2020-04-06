@@ -465,6 +465,9 @@
 
 .travel {
   background-image: url(../images/coctail-bg.png);
+  &.sleep {
+    background-image: url(../images/frangipani.png);
+  }
   background-repeat: no-repeat;
   background-position: bottom right;
   .slider-arrows {
@@ -485,9 +488,14 @@
     min-height: 320px;
     background-repeat: no-repeat;
     background-position: right center;
+    background-size: contain;
     .descr__head {
       position: relative;
-      padding-right: 215px;
+      padding-right: 68px;
+      &.descr__head-sleep {
+        padding-right: 215px;
+      }
+
       img {
         position: absolute;
         top: 0;
@@ -497,10 +505,7 @@
         position: absolute;
         top: 0;
         right: 0;
-        li {
-          display: inline-block;
-          margin-left: -25px;
-        }
+
         img {
           position: static;
         }
@@ -559,8 +564,210 @@
   }
 }
 
+.shop {
+  background-image: url(../images/shop-bg.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  .slider-arrows {
+    opacity: 0.25;
+  }
+}
 
+.shop__slider {
+  padding-left: 132px;
+}
 
+.shop__slider-inner {
+  display: flex;
+}
 
+.shop__slider-info {
+  max-width: 480px;
+  width: 100%;
+  margin-right: 40px;
+  padding-top: 150px;
+}
+
+.descr__head-shop {
+  max-width: 340px;
+  margin-bottom: 47px;
+}
+
+.shop__star-list {
+  margin-left: -9px;
+}
+
+.shop__slider-price {
+  margin-bottom: 64px;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 40px;
+  sup {
+    font-size: 18px;
+    padding-left: 2px;
+  }
+}
+
+.shop__slider-content {
+  padding-left: 170px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.shop__extras {
+  padding-left: 150px;
+}
+
+.shop__extras-inner {
+  display: flex;
+}
+
+.shop__extras-title {
+  margin-bottom: 25px;
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 40px;
+}
+
+.shop__extras-box {
+  text-align: center;
+  margin-right: 57px;
+}
+
+.shop__extras-img {
+  min-height: 105px;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  margin-bottom: 35px;
+}
+
+.shop__extras-name {
+  margin-bottom: 16px;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 8px;
+  opacity: 0.5;
+}
+
+.shop__extras-price {
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 40px;
+}
+
+.surfboard {
+  position: relative;
+}
+
+.surfboard-box {
+  position: absolute;
+
+}
+
+.surfboard__pos--1{
+  top: 215px;
+  right: 40px;
+}
+.surfboard__pos--2{
+  top: 313px;
+  left: -6px;
+}
+.surfboard__pos--3{
+  bottom: 70px;
+  left: 52px;
+  .surfboard-box__content {
+    top: -15px;
+    left: -400px;
+    padding-left: 0;
+    padding-right: 104px;
+    &::before{
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0;
+      left: auto;
+      width: 80px;
+      height: 1px;
+      background-color: #fff;
+    }
+  }
+}
+
+.surfboard-box__circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: relative;
+  background-color: #fff;
+  cursor: pointer;
+  &.active {
+    .circle-row {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+  }
+}
+
+.circle-row{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 2px;
+  background-color: $green;
+  transform: translate(-50%, -50%) rotate(0deg);
+  & + .circle-row {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+}
+
+.surfboard-box__circle.active  + .surfboard-box__content{
+  display: block;
+
+}
+
+.surfboard-box__content {
+  position: absolute;
+  top: -15px;
+  left: 40px;
+  display: none;
+  width: 359px;
+  padding-left: 104px;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 24px;
+  &::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 80px;
+    height: 1px;
+    background-color: #fff;
+  }
+}
+
+.footer {
+  padding: 285px 0 34px;
+  text-align: center;
+  .btn {
+    span {
+      padding: 17px 17px 15px;
+      &::after {
+        display: none;
+      }
+    }
+
+  }
+}
+
+.footer__copy {
+  padding-top: 27px;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 1.05px;
+  opacity: 0.5;
+}
 
 @import "media";
