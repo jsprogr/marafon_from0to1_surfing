@@ -6,7 +6,7 @@ const fileinclude = require('gulp-file-include');
 
 
 module.exports = function html() {
-  return gulp.src('app/html/**/*.html')
+  return gulp.src('app/html/pages/*.html')
     .pipe(fileinclude({
       prefix: '@@',
       basepath: '@file'
